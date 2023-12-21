@@ -1,2 +1,4 @@
-package jb.inventories.service;public class ProductService {
+package jb.inventories.service;
+
+public class ProductService {
 }

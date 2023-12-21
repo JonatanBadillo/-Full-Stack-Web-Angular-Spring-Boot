@@ -1,2 +1,7 @@
-package jb.inventories.repository;public interface ProductRepository {
+package jb.inventories.repository;
+
+import jb.inventories.model.Product;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface ProductRepository extends JpaRepository<Product,Integer>{
 }
