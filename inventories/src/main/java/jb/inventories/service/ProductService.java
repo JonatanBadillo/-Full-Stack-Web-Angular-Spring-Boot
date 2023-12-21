@@ -14,7 +14,7 @@ public class ProductService implements IProductService{
 
     @Override
     public List<Product> listProducts() {
-        this.productRepository.findAll();
+        return this.productRepository.findAll();
     }
 
     @Override
