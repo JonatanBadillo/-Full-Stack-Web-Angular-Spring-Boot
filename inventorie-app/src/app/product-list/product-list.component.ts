@@ -1,24 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Product } from '../product';
 import { ProductService } from '../product.service';
 
 @Component({
   selector: 'app-product-list',
-  standalone: true,
-  imports: [],
-  templateUrl: './product-list.component.html',
+  templateUrl: './product-list.component.html'
 })
-export class ProductListComponent {
+export class ProductListComponent implements OnInit {
   products: Product[];
 
-  constructor(private productService: ProductService){}
+  constructor(private productService: ProductService) {}
 
-  ngOnInit(){
+  ngOnInit() {
     // load all products
     this.obtainProducts();
   }
 
-  private obtainProducts(){
+  private obtainProducts() {
     // consume data of observable
     this.productService.obtainProductsList().subscribe(
       (data => {
